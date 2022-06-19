@@ -25,6 +25,7 @@ const server = http.createServer((req, res) => {
     else {
       // 위의 if문을 통해 OPTIONS method에 대한 응답을 해주지 않으면
       // CORS 에러가 발생 
+      res.writeHead(404, defaultCorsHeader);
       res.end("오류났어요");
       console.log('콘솔: 오류났어요');
     }
